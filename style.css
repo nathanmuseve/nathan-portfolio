@@ -5,7 +5,9 @@
   margin: 0;
   padding: 0;
 }
-
+body {
+  background-color: rgb(52, 61, 61);
+}
 /* Nav bar  */
 #navBar{
   background-color: rgb(52, 61, 61);
@@ -108,3 +110,35 @@ button a, .seeMore {
   text-decoration: none;
   color: white;
 }
+
+/* .....ABOUT.....  */
+.aboutContainer, .aboutContainer li {
+  background-color: rgb(52, 61, 61);
+  list-style-type: none;
+}
+.aboutContainer{
+ padding: 6px;
+}
+.aboutdisplayflex, .goalsDisplayFlex {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem;
+}
+.about h2, .goals h2 {
+  text-align: center;
+  color: white;
+}
+.align {
+  text-align: justify;
+  font-size: large;
+  padding: 4px;
+  border: 0.5px solid  rgb(239, 243, 243);
+  border-radius: 8px;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* ..........PORTFOLIO........ */
+.portfolio {
+  background-color: rgb(52, 61, 61);
+}
+.skillsDisplayFlex
