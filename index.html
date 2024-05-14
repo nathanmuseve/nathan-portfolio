@@ -10,8 +10,8 @@
 <body>
   <header id="navBar">
     <div class="socialLinks">
-      <span><i class="fa-brands fa-github"></i></span>
-      <span><i class="fa-brands fa-linkedin"></i></span>
+      <span><a href="https://github.com/nathanmuseve"><i class="fa-brands fa-github"></i></a></span>
+      <span><a href="linkedin.com/in/museve-nathan-8b279a172"><i class="fa-brands fa-linkedin"></i></a></span>
       <span><i class="fa-brands fa-facebook"></i></span>
       <span><i class="fa-brands fa-discord"></i></span>
     </div>
@@ -19,9 +19,9 @@
       <form action="" class="myForm">
         <div class="inputs">
           <label for="search"></label>
-          <input type="search" name="mySearch" id="search" placeholder="Type something to search...">
+          <input type="search" name="mySearch" id="search" placeholder="search..." required>
         </div>
-        <button type="submit" class="btn">Search</button>
+        <button type="search" class="btn"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
       </form>
     </div>
     <nav>
@@ -32,7 +32,7 @@
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contacts">contacts</a></li>
       </ul>
-      <div class="menu"><i class="fa-solid fa-bars"></i>Menu</div>
+      <div class="menu" id="menu"><i class="fa-solid fa-bars" title="close"></i></div>
     </nav>
   </header>
   <!-- ..........MY HOME..........  -->
@@ -106,11 +106,11 @@
 
 <!-- ............PORTFOLIO............  -->
 <section class="portfolio" id="portfolio">
-
+  <h2>Personal Portfolio</h2>
 
   <div class="skillsDisplayFlex">
     <!-- ...........Education............... -->
-    <div class="education">
+    <div class="education align">
       <h2>Education Summary</h2>
       <ol>
         <li>Completed Primary School in the year 2013: Attained <b>Kenya Certificate of Primary Education(KCPE)</b></li>
@@ -121,7 +121,7 @@
     </div>
 
       <!-- ..........SKILLS...........  -->
-    <div class="professionalSkills">
+    <div class="professionalSkills align">
       <!-- ...........Professional skills...........  -->
       <h2>Professional Skills</h2>
       <ul>
@@ -137,7 +137,7 @@
       </ul>
     </div>
     <!-- .........Tech Skills........  -->
-    <div class="techSkills">
+    <div class="techSkills align">
       <h2>Tech Skills, Web Design Skills</h2>
       <ul>
         <li>HTML</li>
@@ -149,103 +149,116 @@
   </div>
 
   <!-- ................WORK EXPERIENCE........  -->
-  <div class="experienceDisplayFlex">
+  <section class="experience">
     <h2>Work Experience</h2>
-    <p><b>Postion held, and Places worked</b></p>
-    <div class="2018">
-      <h2>Jan 2018-August 2018</h2>
-      <div class="place">Place: Bukhakunga Secondary, Kakamega, kenya.</div>
-      <div class="position">Postion: Assistant Librarian</div>
-      <div class="duties">
-        <h2>Duties And Responsibilities.</h2>
-        <ul>
-          <li>Assisted with receiving and recording of new receipts. </li>
-          <li>Issuing out and any other resource.</li>
-          <li>Maintained files of issued and returned.</li>
-          <li>Assisted in organizing the library, planning and managing.</li>
-          <li>Assisted in supervision of library resources.</li>
-          <li>Assisted in descriptive analysis of library data.</li>
-        </ul>
+    <div class="experienceDisplayFlex">
+
+      <div class="2018 align">
+        <h2>Jan 2018-August 2018</h2>
+        <div class="place">Place: Bukhakunga Secondary, Kakamega, kenya.</div>
+        <div class="position">Postion: Assistant Librarian</div>
+        <div class="duties">
+          <h2>Duties And Responsibilities.</h2>
+          <ul>
+            <li>Assisted with receiving and recording of new receipts. </li>
+            <li>Issuing out and any other resource.</li>
+            <li>Maintained files of issued and returned.</li>
+            <li>Assisted in organizing the library, planning and managing.</li>
+            <li>Assisted in supervision of library resources.</li>
+            <li>Assisted in descriptive analysis of library data.</li>
+          </ul>
+        </div>
       </div>
 
-
-    <div class="2019">
-      <h2>Jan 2019-Oct 2020</h2>
-      <div class="place">Place: Sawawa Secondary, Kakamega, Kenya.</div>
-      <div class="position">Postion: Teacher-Mathematics/Business Studies.</div>
-      <div class="duties">
-        <h2>Duties And Responsibilities.</h2>
-        <ul>
-          <li>Taught Mathematics and Business Studies subjects.</li>
-          <li>Developed lesson plans.</li>
-          <li>Timely captured student’s data..</li>
-          <li>Encouraged critical thinking and innovation among students..</li>
-          <li>I was also entrusted with class teacher responsibilities</li>
-        </ul>
+      <div class="2019 align">
+        <h2>Jan 2019-Oct 2020</h2>
+        <div class="place">Place: Sawawa Secondary, Kakamega, Kenya.</div>
+        <div class="position">Postion: Teacher-Mathematics/Business Studies.</div>
+        <div class="duties">
+          <h2>Duties And Responsibilities.</h2>
+          <ul>
+            <li>Taught Mathematics and Business Studies subjects.</li>
+            <li>Developed lesson plans.</li>
+            <li>Timely captured student’s data..</li>
+            <li>Encouraged critical thinking and innovation among students..</li>
+            <li>I was also entrusted with class teacher responsibilities</li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="2023 align">
+        <h2>March 2023-July 2023</h2>
+        <div class="place">Place: Hipora Business Solutions EA., Nairobi, Kenya.</div>
+        <div class="position">Postion: Loss Control Officer.</div>
+        <div class="duties">
+          <h2>Duties And Responsibilities.</h2>
+          <ul>
+            <li>Double checked the stock received and dispatched.</li>
+            <li>Documented and filed invoices and all other documents involved.</li>
+            <li>Monitored security systems like alarms and closed-circuit cameras.</li>
+            <li>Identified potential thieves from customers or staff.</li>
+            <li>Monitored and reported any person of interest to shoplift to the office concerned and security.</li>
+            <li>Wrote and submitted detailed report at the end of each day.</li>
+          </ul>
+        </div>
       </div>
     </div>
-
-    <div class="2023">
-      <h2>March 2023-July 2023</h2>
-      <div class="place">Place: Hipora Business Solutions EA., Nairobi, Kenya.</div>
-      <div class="position">Postion: Loss Control Officer.</div>
-      <div class="duties">
-        <h2>Duties And Responsibilities.</h2>
-        <ul>
-          <li>Double checked the stock received and dispatched.</li>
-          <li>Documented and filed invoices and all other documents involved.</li>
-          <li>Monitored security systems like alarms and closed-circuit cameras.</li>
-          <li>Identified potential thieves from customers or staff.</li>
-          <li>Monitored and reported any person of interest to shoplift to the office concerned and security.</li>
-          <li>Wrote and submitted detailed report at the end of each day.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ..........ACHIEVEMENTS.........  -->
+  </section>
+  <!-- ..........ACHIEVEMENTS.........  -->
 <div class="achievementsDispalyFlex">
+  <h2>Achievements</h2>
   <div class="achievements">
-    <h2>Achievements</h2>
-    <div class="2018">
+    <div class="2018 align">
       <h2>Jan 2018-August 2018 at Bukhakunga Secondary, Kakamega, kenya.</h2>
       <p>Introduced use of library cards in issuing and return of library resources hence saving on time minimizing losses of properties.</p>
     </div>
-    <div class="2019">
+    <div class="2019 align">
       <h2>Jan 2019-Oct 2020 at Sawawa Secondary, Kakamega, Kenya</h2>
       <p>Launched Business Club in the school with activities such as Hair cutting, School Business canteen, Economics debates among other club activities.</p>
   </div>
 </div>
+</section>
+
 
 <!-- ..........LETS TALK....... -->
-<sectio class="letsTalk">
-  <h3>Let's talk...</h3>
-  <form action="">
-    <div>
-      <div class="subject">
-        <label for="txtArea">Subject</label>
-      </div>
-      <textarea name="subject" id="txtArea" cols="20" rows="10" placeholder="Kindly type the subject matter in this box"></textarea>
-    </div>
-    <div class="sbmt">
-      <button type="submit">Submit</button>
-    </div>
-  </form>
-</sectio>
-
-<!-- ..........FOOTER, CONTACTS..........  -->
 <footer class="contacts" id="contacts">
+  <div class="letsTalk">
+    <form action="" class="myForm2">
+      <div>
+        <div class="inputs1">
+          <h2>Let's talk...</h2>
+        </div>
+        <div class="inputs1">
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Enter your name" maxlength="50" required autocomplete="on">
+        </div>
+        <div class="inputs1">
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Enter your correct email address" maxlength="40" required autocomplete="on">
+        </div>
+        <div>
+          <div class="subject">
+            <label for="txtArea">Subject</label>
+          </div>
+          <textarea name="subject" class="inputs1" id="txtArea" cols="20" rows="10" placeholder="Kindly type the subject matter in this box" required></textarea>
+        </div>
+        <div class="inputs1 sbmt">
+          <input class="sbmt" type="submit" value="Submit">
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- ..........FOOTER, CONTACTS..........  -->
+<footer class="foot">
   <div class="call">
-    <ul>
-      <li><i class="fa-solid fa-phone"></i> +254790711289/710100637</li>
-    </ul>
+    <i class="fa-solid fa-phone"></i> +254790711289/710100637
   </div>
   <div class="map">
-    <i class="fa-solid fa-location-dot"></i>Nairobi
-    <img src="gmap.png" alt="Location Map">
+    <i class="fa-solid fa-location-dot"></i>See Location.
   </div>
 </footer>
+</footer>
+
 <!-- ................THE END OF PAGE.....  -->
 <script src="script.js"></script>
 </body>

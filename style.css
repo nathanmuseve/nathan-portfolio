@@ -48,8 +48,7 @@ nav {
   display: flex;
   justify-content: space-between;
   margin: 6px 1rem 0px;
-  background-color: rgb(63, 68, 68);
-  overflow: hidden;
+  position: relative;
 }
 nav ul {
   display: flex;  
@@ -70,6 +69,15 @@ nav ul>li>a:not(.home1):hover, nav ul>li:nth-of-type(1) {
   border-radius: 3px;
   background-color: rgb(216, 221, 221);
   color: black;
+}
+.menu {
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  top: -28px;
+  right: 1.2rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
 }
 
 /* MY HOME  */
@@ -99,46 +107,74 @@ div .myName:hover {
 .btnDFlex {
   display: flex;
 }
-button:not(.btn) {
+button:not(.btn), .sbmt{
   padding: 6px;
   margin: 3px;
   border: 6px solid transparent;
   border-radius: 7px;
   background-color: rgb(52, 61, 61);
 }
+.btn {
+  padding: 0px 1rem;
+  background-color: rgb(210, 213, 213);
+  border-radius: 7px;
+}
 button a, .seeMore {
   text-decoration: none;
   color: white;
 }
+input.sbmt {
+  background-color: rgb(105, 155, 155);
+}
 
-/* .....ABOUT.....  */
-.aboutContainer, .aboutContainer li {
-  background-color: rgb(52, 61, 61);
+/* .....ABOUT and/or porfolio.....  */
+ li {
   list-style-type: none;
 }
 .aboutContainer{
- padding: 6px;
 }
-.aboutdisplayflex, .goalsDisplayFlex {
+.aboutdisplayflex, .goalsDisplayFlex, .skillsDisplayFlex, .experienceDisplayFlex, .achievements, .letsTalk, .foot {
   display: flex;
   gap: 2rem;
   margin: 1rem;
 }
-.about h2, .goals h2 {
+.about h2, .goals h2, .portfolio h2, .contacts h2 {
   text-align: center;
   color: white;
 }
-.align {
+.align, .myForm2 {
   text-align: justify;
   font-size: large;
   padding: 4px;
-  border: 0.5px solid  rgb(239, 243, 243);
+  border: 0.5px solid  rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.5);
+  opacity: 1;
 }
-
+.letsTalk, .foot {
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.foot {
+  margin-bottom: 3rem;
+}
+.inputs1 {
+}
+input[type=text], input[type=email], input[type=submit], input[type=search],textarea{
+margin: 8 0px;
+padding: 8px;
+font-size: 1.2rem;
+font-weight: 1.2rem;
+width: 100%;
+border: 2px solid rgb(23, 89, 221);
+border-radius: 4px;
+cursor: pointer;
+}
+label {
+  font-size: 1.5rem;
+}
+.call, .map {
+  color: white;
+}
 /* ..........PORTFOLIO........ */
-.portfolio {
-  background-color: rgb(52, 61, 61);
-}
-.skillsDisplayFlex
