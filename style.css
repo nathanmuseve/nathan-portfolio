@@ -49,12 +49,13 @@ nav {
   justify-content: space-between;
   margin: 6px 1rem 0px;
   position: relative;
+  overflow: hidden;
 }
 nav ul {
   display: flex;  
   gap: 1.1rem;
 }
-nav ul>li>a, nav ul>li, span {
+nav ul>li>a, nav ul>li, span, .menu a {
   list-style-type: none;
   text-decoration: none;
   font-size: 1.3rem;
@@ -70,14 +71,46 @@ nav ul>li>a:not(.home1):hover, nav ul>li:nth-of-type(1) {
   background-color: rgb(216, 221, 221);
   color: black;
 }
+li a.home1 {
+  color: black; 
+  display: inline;}
 .menu {
-  font-size: 2rem;
+  display: block;
+  font-size: 1.5rem;
   color: white;
   position: absolute;
-  top: -28px;
-  right: 1.2rem;
-  margin-bottom: 1.5rem;
-  cursor: pointer;
+  top: 8px;
+  right: 1.5rem;
+  margin-top: 1rem;
+  width: 160px;
+  height: 100%;
+}
+#menu {
+ float: left; 
+}
+#showMenu {
+  display: none;
+}
+.menu a {
+  display: block;
+  padding: 4px 12px;
+}
+.menu a:hover {
+  background-color: white;
+  color: black;
+  margin: 0;
+  text-align: center;
+}
+#close {
+  display: none;
+  position: absolute;
+  top: -22px;
+  right: 8px;
+  color: rgb(153, 146, 146);
+  font-size: 1.5rem;
+}
+#close:hover {
+  color: red;
 }
 
 /* MY HOME  */
@@ -157,7 +190,7 @@ input.sbmt {
   padding: 1rem;
 }
 .foot {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 .inputs1 {
 }
@@ -177,4 +210,39 @@ label {
 .call, .map {
   color: white;
 }
-/* ..........PORTFOLIO........ */
+/* ..........MEDIAQUERIES........ */
+@media  (max-width:377px) and (max-width:475px) and (max-width: 500px) {
+  #navBar {
+    box-shadow:none;
+    width: auto;
+    background-color: rgb(48, 73, 117);
+  }
+  #nav {
+    display:none;
+    font-size: 1rem;
+  }
+  #menu {
+    float: left;
+    width: 100px;
+    margin-left: 4px;
+  }
+  .home {
+    width: auto;
+    flex-wrap: wrap;
+    gap:8px;
+  }
+  img {
+    width: 100%;
+  }
+  .btnDFlex {
+    flex-direction: column;
+  }
+  .aboutdisplayflex, .goalsDisplayFlex, .skillsDisplayFlex, .experienceDisplayFlex, .achievements, .letsTalk, .foot {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 4px;
+  }
+  label {
+    font-size: unset;
+  }
+}
