@@ -9,12 +9,6 @@
 </head>
 <body>
   <header id="navBar">
-    <div class="socialLinks">
-      <span><a href="https://github.com/nathanmuseve"><i class="fa-brands fa-github"></i></a></span>
-      <span><a href="linkedin.com/in/museve-nathan-8b279a172"><i class="fa-brands fa-linkedin"></i></a></span>
-      <span><i class="fa-brands fa-facebook"></i></span>
-      <span><i class="fa-brands fa-discord"></i></span>
-    </div>
     <div class="searchContainer">
       <form action="" class="myForm">
         <div class="inputs">
@@ -24,6 +18,7 @@
         <button type="search" class="btn"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
       </form>
     </div>
+    <button id="menu"><i class="fa-solid fa-bars" title="open menu"></i></button>
     <nav id="nav">
       <span>Nathan Museve</span>
       <ul>
@@ -33,16 +28,16 @@
         <li><a href="#contacts">contacts</a></li>
       </ul>
     </nav>
-    <div class="menu">
-      <div id="showMenu">
-        <a class="home1" href="#home"><i class="fa-solid fa-house"></i>Home</a>
-        <a href="#about">About</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contacts">contacts</a>
-      </div>
-    </div>
-    <button id="menu"><i class="fa-solid fa-bars" title="open menu"></i></button>
   </header>
+  
+  <div id="showMenu">
+    <span id="close" title="close menu">&times;</span>
+    <span class="sname">Nathan Museve</span>
+    <a class="home1" href="#home"><i class="fa-solid fa-house"></i>Home</a>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contacts">contacts</a>
+  </div>
   <!-- ..........MY HOME..........  -->
   <section class="home" id="home">
     <img src="picture.jpg" alt="">
@@ -78,9 +73,12 @@
         <div class="myjourney align">
           <h2>My Journey</h2>
           <p>I aspired to take my career Technological fields such computer Science from my childhood. The dream remained valid all along from the time I stareted schooling. From elementary school, I joined primary school with my minds unchanged all through Secondary school.</p>
-          <p>After I sat for Kenya Certificate of Secondary Education, <b>KCSE</b>, in the year 2017 I knew now my dream was coming close to fulfilment. Things went on well from the time results were announced to the application process in 2018. </p>
-          <p>After succefully applying for my dream course, Bachelor of Science in Computer Science, in some of the best universities in Kenya, <b>University of Nairobi(UoN)</b>,Jomo Kenyetta <b>University of Science and Technology(JKUAT), among other choices, I sat back to wait for conformation for I was certain that I have made all necessary requirements for placement.</b></p>
-          <p>Whatever followed remains a mystery, even to me up to today. I finally landed for a <b>Bachelor of Science In Economics and Statistics degree course at Egerton University</b></p>
+          <button class="accordion">Read More...</button>
+          <div class="readMore">
+            <p>After I sat for Kenya Certificate of Secondary Education, <b>KCSE</b>, in the year 2017 I knew now my dream was coming close to fulfilment. Things went on well from the time results were announced to the application process in 2018. </p>
+            <p>After succefully applying for my dream course, Bachelor of Science in Computer Science, in some of the best universities in Kenya, <b>University of Nairobi(UoN)</b>,Jomo Kenyetta <b>University of Science and Technology(JKUAT), among other choices, I sat back to wait for conformation for I was certain that I have made all necessary requirements for placement.</b></p>
+            <p>Whatever followed remains a mystery, even to me up to today. I finally landed for a <b>Bachelor of Science In Economics and Statistics degree course at Egerton University</b></p>
+          </div>
         </div>
         <div class="techJourney align">
           <h2>How I joined Tech Industry</h2>
@@ -120,12 +118,15 @@
     <!-- ...........Education............... -->
     <div class="education align">
       <h2>Education Summary</h2>
-      <ol>
-        <li>Completed Primary School in the year 2013: Attained <b>Kenya Certificate of Primary Education(KCPE)</b></li>
-        <li>Completed Secondary School in the year 2017: Attained <b>Kenya Certificate of Secondary Education(KCSE)</b></li>
-        <li>Completed Tertiary Education in the year 2023: Attained <b>Degree in Bachelor of Science In Economics and Statistics from Egerton University</b></li>
-        <li>Certificate in Web Design and Development: <b>In Progress</b></li>
-       </ol>
+      <button class="accordion">Read More...</button>
+      <div class="readMore">
+        <ol>
+          <li>Completed Primary School in the year 2013: Attained <b>Kenya Certificate of Primary Education(KCPE)</b></li>
+          <li>Completed Secondary School in the year 2017: Attained <b>Kenya Certificate of Secondary Education(KCSE)</b></li>
+          <li>Completed Tertiary Education in the year 2023: Attained <b>Degree in Bachelor of Science In Economics and Statistics from Egerton University</b></li>
+          <li>Certificate in Web Design and Development: <b>In Progress</b></li>
+         </ol>
+      </div>
     </div>
 
       <!-- ..........SKILLS...........  -->
@@ -231,26 +232,28 @@
 <!-- ..........LETS TALK....... -->
 <footer class="contacts" id="contacts">
   <div class="letsTalk">
-    <form action="" class="myForm2">
+    <form action="" class="myForm2" name="myform">
       <div>
         <div class="inputs1">
           <h2>Let's talk...</h2>
         </div>
         <div class="inputs1">
-          <label for="name">Name:</label>
-          <input type="text" id="name" placeholder="Enter your name" maxlength="50" required autocomplete="on">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="Name" placeholder="Enter your name" maxlength="50"  autocomplete="on">
         </div>
         <div class="inputs1">
-          <label for="email">Email:</label>
-          <input type="email" id="email" placeholder="Enter your correct email address" maxlength="40" required autocomplete="on">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email" placeholder="Enter your correct email address" maxlength="40"  autocomplete="on">
         </div>
         <div>
-          <div class="subject">
-            <label for="txtArea">Subject</label>
+          <div class="inputs1">
+            <label for="subject">SubjectTittle</label>
+            <input type="text" id="subject" name="Subject" placeholder="Enter your subject title here" maxlength="40"  autocomplete="on">
           </div>
-          <textarea name="subject" class="inputs1" id="txtArea" cols="20" rows="10" placeholder="Kindly type the subject matter in this box" required></textarea>
+          <label for="txtArea">SubjectBody</label>
+          <textarea name="subject message" class="inputs1" id="txtArea" cols="20" rows="10" placeholder="Kindly type the subject message in this box"></textarea>
         </div>
-        <div class="inputs1 sbmt">
+        <div class="inputs1">
           <input class="sbmt" type="submit" value="Submit">
         </div>
       </div>
@@ -263,6 +266,12 @@
   </div>
   <div class="map">
     <i class="fa-solid fa-location-dot"></i>See Location.
+  </div>
+  <div class="socialLinks">
+    <span><a href="https://github.com/nathanmuseve"><i class="fa-brands fa-github"></i></a></span>
+    <span><a href="linkedin.com/in/museve-nathan-8b279a172"><i class="fa-brands fa-linkedin"></i></a></span>
+    <span><i class="fa-brands fa-facebook"></i></span>
+    <span><i class="fa-brands fa-discord"></i></span>
   </div>
 </footer>
 </footer>

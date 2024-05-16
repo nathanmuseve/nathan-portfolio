@@ -6,7 +6,8 @@
   padding: 0;
 }
 body {
-  background-color: rgb(52, 61, 61);
+  background-color: white;
+  margin: 1rem;
 }
 /* Nav bar  */
 #navBar{
@@ -19,7 +20,12 @@ body {
   width: 100%;
   padding-bottom: 8px 8px 0px 8px;
 }
-.socialLinks, .searchContainer {
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchContainer {
   margin: 8px;
   padding: 4px;
   cursor: pointer;
@@ -31,20 +37,7 @@ body {
 .inputs {
   cursor: pointer;
 }
-/* @keyframes backwrds {
-  from{width:0%}
-  to{width:100%}
-}
-.socialLinks {
-animation-name: backwards;
-animation-duration: 10s;
-animation-timing-function: ease-in-out;
-animation-fill-mode: backwards;
-animation-iteration-count: infinite;
-animation-range-start: 2s;
-animation-range: 2, 10s;
-} */
-nav {
+#nav {
   display: flex;
   justify-content: space-between;
   margin: 6px 1rem 0px;
@@ -55,7 +48,7 @@ nav ul {
   display: flex;  
   gap: 1.1rem;
 }
-nav ul>li>a, nav ul>li, span, .menu a {
+nav ul>li>a, nav ul>li, span, #showMenu a {
   list-style-type: none;
   text-decoration: none;
   font-size: 1.3rem;
@@ -71,42 +64,60 @@ nav ul>li>a:not(.home1):hover, nav ul>li:nth-of-type(1) {
   background-color: rgb(216, 221, 221);
   color: black;
 }
+nav span {
+  margin-left: 1.8rem;
+}
 li a.home1 {
   color: black; 
-  display: inline;}
-.menu {
-  display: block;
-  font-size: 1.5rem;
-  color: white;
-  position: absolute;
-  top: 8px;
-  right: 1.5rem;
-  margin-top: 1rem;
-  width: 160px;
-  height: 100%;
+  display: inline;
 }
 #menu {
- float: left; 
+  display: none;
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  margin-left: 0;
+  color: white;
+}
+#menu:hover {
+  padding: 4px 8px;
+  color: black;
+  background-color: white;
 }
 #showMenu {
   display: none;
-}
-.menu a {
-  display: block;
-  padding: 4px 12px;
-}
-.menu a:hover {
-  background-color: white;
-  color: black;
+  background-color: rgb(181, 176, 176);
+  height: 250px;
+  width: 200px;
+  padding: 18px 0px;
   margin: 0;
-  text-align: center;
+  text-align: justify;
+  position: relative;
+  position:fixed;
+}
+#showMenu a, .sname  {
+  display: block;
+}
+.sname {
+  color: black;
+  font-size: x-large;
+  font-weight: bolder;
+  text-align: justify;
+}
+.sname:hover {
+  color: rgb(206, 60, 89);
+}
+#showMenu a:hover {
+  background-color: rgb(229, 224, 224);
+  color: black;
 }
 #close {
-  display: none;
+  display: block;
   position: absolute;
+  padding: 20px 0px 6px 0px;
   top: -22px;
-  right: 8px;
-  color: rgb(153, 146, 146);
+  right: 1.2rem;
+  color: rgb(13, 13, 13);
   font-size: 1.5rem;
 }
 #close:hover {
@@ -173,7 +184,18 @@ input.sbmt {
 }
 .about h2, .goals h2, .portfolio h2, .contacts h2 {
   text-align: center;
-  color: white;
+  color: rgb(131, 94, 94);
+}
+/* Trying accordion dispaly  */
+.active, .accordion {
+  width: 100%;
+  background-color: #e6dfdf;
+  display: none;
+}
+
+.readMore {
+  display: block;
+  margin: 4px 8px;
 }
 .align, .myForm2 {
   text-align: justify;
@@ -205,44 +227,93 @@ border-radius: 4px;
 cursor: pointer;
 }
 label {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 .call, .map {
-  color: white;
+  color: rgb(33, 30, 30);
+}
+.socialLinks {
+  margin: 8px;
+  padding: 4px;
+  cursor: pointer;
+}
+.socialLinks span  {
+  background-color: rgb(105, 155, 155);
+  font-size: 2.5rem;
+  text-align: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid transparent;
+  border-radius: 100%;
 }
 /* ..........MEDIAQUERIES........ */
-@media  (max-width:377px) and (max-width:475px) and (max-width: 500px) {
+@media  (max-width:320px), (max-width: 600px) {
   #navBar {
+    width: 100%;
     box-shadow:none;
-    width: auto;
     background-color: rgb(48, 73, 117);
+    padding-bottom: 5px 5px 0px 6px;
   }
-  #nav {
-    display:none;
-    font-size: 1rem;
+  #nav{
+    display: none;
+  }
+  .searchContainer {
+    margin-left: 2rem;
   }
   #menu {
-    float: left;
-    width: 100px;
-    margin-left: 4px;
+    display: block;
   }
   .home {
     width: auto;
     flex-wrap: wrap;
     gap:8px;
   }
+  #menu:hover {
+    padding: auto;
+    color: black;
+    background-color: white;
+  }
+  #showMenu {
+    background-color: rgb(132, 131, 131);
+    height: auto;
+    width: 180px;
+    z-index: 1;
+  }
+  .sname {
+    font-size: medium;
+  }
+  .text-content {
+    font-size: 1rem;
+    text-align: justify;
+    margin: auto;
+  }
   img {
     width: 100%;
+    margin: auto;
   }
   .btnDFlex {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
   .aboutdisplayflex, .goalsDisplayFlex, .skillsDisplayFlex, .experienceDisplayFlex, .achievements, .letsTalk, .foot {
     flex-wrap: wrap;
     gap: 8px;
     margin: 4px;
   }
+  .myForm2 {
+    text-align: justify;
+    font-size: large;
+    padding: 2px;
+    border: 0.5px solid  rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-shadow: none
+  }
   label {
     font-size: unset;
+  }
+  .letsTalk, .foot {
+    padding: auto;
+  }
+  .sbmt {
+    width: 50%;
   }
 }
