@@ -1,3 +1,13 @@
+// Time Set At Top[ Nav ]
+setInterval(timing, 1000);
+function timing(){
+  let tim = new Date();
+  let disp = tim.toLocaleTimeString();
+  document.getElementById("clock").innerHTML = disp;
+  disp.style.color = "";
+};
+
+
 // Open Menu on small screens 
 let menu = document.getElementById("menu");
 let events = document.getElementById("showMenu");
