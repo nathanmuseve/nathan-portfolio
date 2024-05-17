@@ -2,9 +2,9 @@
 setInterval(timing, 1000);
 function timing(){
   let tim = new Date();
-  let disp = tim.toLocaleTimeString();
+  let disp = tim.toLocaleString();
   document.getElementById("clock").innerHTML = disp;
-  disp.style.color = "";
+  disp.style.color = "white";
 };
 
 
@@ -35,24 +35,27 @@ function submt(event) {
   event.preventDefault();
   document.getElementsByClassName("myForm2")[0];
   if (nameInput.value === "" || nameInput.value === null) {
-    alert("Name can't be empty, plese fill in the  correct name");
+    alert("Enter correct details");
     return false;
-  } else {
-  alert("Field entered correctly.");
+  } else if(nameInput.value = value){
+  alert("Your details have been successfully submitted to Nathan Museve.");
     return true;
+  } else{
+    alert("Pleasae fill in all fields correctly")
+    return false;
   }
 };
-function submt(event) {
-    event.preventDefault();
-    document.getElementsByClassName("myForm2")[1];
-    if (nameInput.value === "" || nameInput.value === null) {
-      alert("Email can't be empty, plese fill in the  correct name");
-      return false;
-    } else {
-    alert("Email entered correctly.");
-      return true;
-    }
-  };
+// function submt(event) {
+//     event.preventDefault();
+//     document.getElementsByClassName("myForm2")[1];
+//     if (nameInput.value === "" || nameInput.value === null) {
+//       alert("Email can't be empty, plese fill in the  correct name");
+//       return false;
+//     } else {
+//     alert("Email entered correctly.");
+//       return true;
+//     }
+//   };
 
 
 

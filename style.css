@@ -7,7 +7,12 @@
 }
 body {
   background-color: white;
-  margin: 1rem;
+  margin: ;
+}
+#clock {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
 }
 /* Nav bar  */
 #navBar{
@@ -246,6 +251,7 @@ label {
   border: 1px solid transparent;
   border-radius: 100%;
 }
+
 /* ..........MEDIAQUERIES........ */
 @media  (max-width:320px), (max-width: 600px) {
   #navBar {
@@ -299,7 +305,7 @@ label {
     gap: 8px;
     margin: 4px;
   }
-  .myForm2 {
+  .myform1 {
     text-align: justify;
     font-size: large;
     padding: 2px;
